@@ -1,0 +1,25 @@
+<div class="banner">
+</div>
+
+<section class="container produtos" id="produtos">
+    <div class="card-grid row">
+        <div class="card col" *ngFor="let produto of produtos">
+            <div class="imagem">
+                <img src="{{ produto.imagem }}" alt="">
+            </div>
+            
+            <div class="text">
+                <p class="nome-produto">{{ produto.nome }}</p>
+
+                <p class="descricao-produto">{{ produto.descricao }}</p>
+
+            </div>
+            
+            <div class="botao">
+                <p class="preco-produto">R$ {{ produto.preco | number:"1.2-2" }} {{ produto.unidadeDeMedida}}</p>
+                <a href="" class="btn btn-default">Comprar >>></a>
+            </div>
+        </div>
+
+    </div>
+</section>
